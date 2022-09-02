@@ -1,0 +1,6 @@
+framework module OurCommonTools {
+  umbrella header "OurCommonTools-umbrella.h"
+
+  export *
+  module * { export * }
+}
