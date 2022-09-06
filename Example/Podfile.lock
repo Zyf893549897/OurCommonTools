@@ -1,5 +1,5 @@
 PODS:
-  - OurCommonTools (0.0.1)
+  - OurCommonTools (0.0.2)
 
 DEPENDENCIES:
   - OurCommonTools (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  OurCommonTools: 8a247657cbd6a4edfa652a8cdfc242c2af567510
+  OurCommonTools: 00270634262058767583e7983f06f4884855aa44
 
 PODFILE CHECKSUM: 4c5b962007d2514756e37b25df666c478101305a
 
