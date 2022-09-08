@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param space <#space description#>
 /// @param style <#style description#>
 /// @param direction 0 从左往右  1 从右往左
-+(void)createImages:(NSArray *)imgUrlArr atView:(UIView *)view width:(CGFloat)width space:(CGFloat)space style:(NSInteger)style direction:(NSInteger)direction;
+//+(void)createImages:(NSArray *)imgUrlArr atView:(UIView *)view width:(CGFloat)width space:(CGFloat)space style:(NSInteger)style direction:(NSInteger)direction;
 
 // 根据宽度和图片宽高，计算出合适的高度
 +(CGFloat)getImgHeightWithSize:(CGSize)size width:(CGFloat)width;

@@ -79,84 +79,84 @@
     NSLog(@"nutableArray :%@",array);
     return array;
 }
-+(void)createImages:(NSArray *)imgUrlArr atView:(UIView *)view width:(CGFloat)width space:(CGFloat)space style:(NSInteger)style direction:(NSInteger)direction{
-    if (imgUrlArr.count == 0) {
-        return;
-    }
-    CGFloat spaceX = 0;
-    CGFloat spaceY = 0;
-    if (direction == 0) {
-        for (int i = 0; i < imgUrlArr.count; i ++) {
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(spaceX + i * space, spaceY, width, width)];
-            imageView.layer.cornerRadius = width/2;
-            imageView.layer.borderColor = [UIColor whiteColor].CGColor;
-            imageView.layer.borderWidth = 1;
-            imageView.clipsToBounds = YES;
-            if (style == 2) {
-                imageView.image = [UIImage imageNamed:imgUrlArr[i]];
-            }else{
-                [imageView sd_setImageWithURL: [NSURL URLWithString:imgUrlArr[i]]];
-            }
-            
-            [view addSubview:imageView];
-            if (style == 1) {
-                if (i == imgUrlArr.count - 1) {
-                   
-                    //模糊的效果
-                    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-                    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blur];
-                    visualEffectView.frame = imageView.bounds;
-                    visualEffectView.alpha = 0.7;
-                    [imageView addSubview:visualEffectView];
-                    // 省略号
-                    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(spaceX + i * 43, spaceY - 5, width, width)];
-                    label.font = [UIFont systemFontOfSize:26];
-                    label.text = @"...";
-                    label.textAlignment = NSTextAlignmentCenter;
-                    label.textColor = [UIColor whiteColor];
-                    [view addSubview:label];
-                }
-            }
-            
-        }
-    }else{
-        for (NSInteger i = imgUrlArr.count -1; i >=  0; i --) {
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(spaceX + i * space, spaceY, width, width)];
-            imageView.layer.cornerRadius = width/2;
-            imageView.layer.borderColor = [UIColor whiteColor].CGColor;
-            imageView.layer.borderWidth = 1;
-            imageView.clipsToBounds = YES;
-            if (style == 2) {
-                imageView.image = [UIImage imageNamed:imgUrlArr[i]];
-            }else{
-                [imageView sd_setImageWithURL: [NSURL URLWithString:imgUrlArr[i]]];
-            }
-            
-            [view addSubview:imageView];
-            if (style == 1) {
-                if (i == imgUrlArr.count - 1) {
-                   
-                    //模糊的效果
-                    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-                    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blur];
-                    visualEffectView.frame = imageView.bounds;
-                    visualEffectView.alpha = 0.7;
-                    [imageView addSubview:visualEffectView];
-                    // 省略号
-                    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(spaceX + i * 43, spaceY - 5, width, width)];
-                    label.font = [UIFont systemFontOfSize:26];
-                    label.text = @"...";
-                    label.textAlignment = NSTextAlignmentCenter;
-                    label.textColor = [UIColor whiteColor];
-                    [view addSubview:label];
-                }
-            }
-            
-        }
-    }
-    
-
-}
+//+(void)createImages:(NSArray *)imgUrlArr atView:(UIView *)view width:(CGFloat)width space:(CGFloat)space style:(NSInteger)style direction:(NSInteger)direction{
+//    if (imgUrlArr.count == 0) {
+//        return;
+//    }
+//    CGFloat spaceX = 0;
+//    CGFloat spaceY = 0;
+//    if (direction == 0) {
+//        for (int i = 0; i < imgUrlArr.count; i ++) {
+//            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(spaceX + i * space, spaceY, width, width)];
+//            imageView.layer.cornerRadius = width/2;
+//            imageView.layer.borderColor = [UIColor whiteColor].CGColor;
+//            imageView.layer.borderWidth = 1;
+//            imageView.clipsToBounds = YES;
+//            if (style == 2) {
+//                imageView.image = [UIImage imageNamed:imgUrlArr[i]];
+//            }else{
+//                [imageView sd_setImageWithURL: [NSURL URLWithString:imgUrlArr[i]]];
+//            }
+//
+//            [view addSubview:imageView];
+//            if (style == 1) {
+//                if (i == imgUrlArr.count - 1) {
+//
+//                    //模糊的效果
+//                    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//                    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blur];
+//                    visualEffectView.frame = imageView.bounds;
+//                    visualEffectView.alpha = 0.7;
+//                    [imageView addSubview:visualEffectView];
+//                    // 省略号
+//                    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(spaceX + i * 43, spaceY - 5, width, width)];
+//                    label.font = [UIFont systemFontOfSize:26];
+//                    label.text = @"...";
+//                    label.textAlignment = NSTextAlignmentCenter;
+//                    label.textColor = [UIColor whiteColor];
+//                    [view addSubview:label];
+//                }
+//            }
+//
+//        }
+//    }else{
+//        for (NSInteger i = imgUrlArr.count -1; i >=  0; i --) {
+//            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(spaceX + i * space, spaceY, width, width)];
+//            imageView.layer.cornerRadius = width/2;
+//            imageView.layer.borderColor = [UIColor whiteColor].CGColor;
+//            imageView.layer.borderWidth = 1;
+//            imageView.clipsToBounds = YES;
+//            if (style == 2) {
+//                imageView.image = [UIImage imageNamed:imgUrlArr[i]];
+//            }else{
+//                [imageView sd_setImageWithURL: [NSURL URLWithString:imgUrlArr[i]]];
+//            }
+//
+//            [view addSubview:imageView];
+//            if (style == 1) {
+//                if (i == imgUrlArr.count - 1) {
+//
+//                    //模糊的效果
+//                    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//                    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blur];
+//                    visualEffectView.frame = imageView.bounds;
+//                    visualEffectView.alpha = 0.7;
+//                    [imageView addSubview:visualEffectView];
+//                    // 省略号
+//                    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(spaceX + i * 43, spaceY - 5, width, width)];
+//                    label.font = [UIFont systemFontOfSize:26];
+//                    label.text = @"...";
+//                    label.textAlignment = NSTextAlignmentCenter;
+//                    label.textColor = [UIColor whiteColor];
+//                    [view addSubview:label];
+//                }
+//            }
+//
+//        }
+//    }
+//
+//
+//}
 
 +(CGFloat)getImgHeightWithSize:(CGSize)size width:(CGFloat)width{
     CGFloat height = 0;
