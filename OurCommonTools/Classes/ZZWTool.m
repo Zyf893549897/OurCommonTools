@@ -260,8 +260,12 @@ return theImage;
     return mutStr;
 }
 +(NSString *)getUtf8EncodeWithString:(NSString *)string{
-    NSString *result = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return result;
+   
+    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString: string]  invertedSet];
+    NSString *encodedUrl = [string stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+    
+//    NSString *encodedUrl = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return encodedUrl;
 }
 
 //判断手机号码格式是否正确
